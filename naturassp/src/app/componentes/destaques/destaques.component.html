@@ -1,0 +1,18 @@
+<app-carrosel></app-carrosel>
+<div class="container" id="destaque">
+    
+    <div class="row">
+            <div *ngFor="let ITEM of lista" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card">
+                    <img src="{{ ITEM.linkFoto }}" class="card-img-top" alt="{{ ITEM.nome }}">
+                    <div class="card-body">
+                      <h5 class="card-title text-center">{{ ITEM.nome }}</h5>
+                      <h6 class="card-subtitle mb-2 text-center">{{ ITEM.preco | currency:'BRL' }}</h6>
+                      <p class="card-text">{{ ITEM.detalhe }}</p>
+                      <p class="card-text">Categoria: {{ ITEM.categoria.nome}}</p>
+                      <a href="#" class="btn btn-primary">Eu quero</a>
+                    </div>
+                  </div>
+            </div>   
+    </div>
+</div>
