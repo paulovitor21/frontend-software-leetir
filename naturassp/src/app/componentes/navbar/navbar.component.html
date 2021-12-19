@@ -20,18 +20,15 @@
                   <li *ngFor="let CAT of lista">
                     <a class="dropdown-item" href="#">{{ CAT.nome}}</a>
                   </li>
-                  <!--
-                      
-                      <li><a class="dropdown-item" href="#">Categoria 2</a></li>
-                      <li><a class="dropdown-item" href="#">Categoria 3</a></li>
-                  -->
-                  
                 </ul>
               </li>
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> <i class="fas fa-shopping-cart fa-1x"></i> </a>
+                        <a class="nav-link" [routerLink]="'carrinho'"> 
+                          <i class="fas fa-shopping-cart fa-1x"></i>
+                          <span class="badge bg-danger" *ngIf="numItens > 0">{{numItens}}</span>
+                        </a>
                     </li>
                 </ul>
             </ul>

@@ -10,7 +10,7 @@
                       <h6 class="card-subtitle mb-2 text-center">{{ ITEM.preco | currency:'BRL' }}</h6>
                       <p class="card-text">{{ ITEM.detalhe }}</p>
                       <p class="card-text">Categoria: {{ ITEM.categoria.nome}}</p>
-                      <a href="#" class="btn btn-primary">Eu quero</a>
+                      <a [routerLink]="['/detalhe/', ITEM.id]" class="btn btn-primary">Eu quero</a>
                     </div>
                   </div>
             </div>   
